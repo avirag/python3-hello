@@ -1,18 +1,11 @@
-students_count = 1000
-print(type(students_count))
+# immutable (bool, int, float, tuple, str, frozenset)
+x = 1
+print(id(x))
+x = x + 1
+print(id(x))
 
-rating = 4.99
-print(type(rating))
-
-rating = "good"
-print(type(rating))
-
-is_published = False
-print(type(is_published))
-
-course_name= """
-Multiple lines
-"""
-
-x, y = 1, 2
-x = y = 1
+# mutable (list, set, dict)
+y = [1, 2, 3]
+print(id(y))
+y.append(4)
+print(id(y))
