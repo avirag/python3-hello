@@ -1,29 +1,33 @@
-age = 22
+def increment(number: int, by: int = 1) -> tuple:
+    return (number, number + by)
 
-# not, or, and
-if not age <= 18:
-  print('Hello')
 
-if  18 < age < 70:
-  print('John')
+print(increment(2, by=3))
 
-for x in "Python":
-  print(x)
 
-for x in ['a', 'b', 'c']:
-  print(x)
+def multiply(*list):
+    total = 1
+    for number in list:
+        total *= number
+    return total
 
-for x in range(7, 15, 2):
-  print(x)
 
-print(type(range(5)))
-print(type([1, 2, 3]))
+print(multiply(2, 3, 4, 5))
 
-names = ["John", "Mary"]
-found = False
-for name in names:
-  if name.startswith("J"):
-    print("Found")
-    break
-else:
-  print("Not found")
+
+def save_user(**user):
+    print(user)
+    print(user["name"])
+
+
+save_user(id=1, name="admin")
+
+
+message = "a"
+
+def greet():
+  global message
+  message = "b"
+
+greet()
+print(message)
